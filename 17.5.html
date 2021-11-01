@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.5</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 20px 20px;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color:white;
+            text-align: center;
+            line-height: 1.5;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .tooltip {
+            position: relative;
+
+            border-bottom:1px dashed #000
+
+        }
+        .tooltip:before {
+            position: absolute;
+            content: attr(data-msg);
+            
+          
+            transform:translateY(-50%);
+
+            left:100%;
+            margin-left:1px;
+
+            width:100px;
+            /* padding:10px; */
+            border-radius:10px;
+            background:yellow;
+            color: black;
+            text-align:center;
+            font-size: 12px;
+
+            display:none;  
+        }
+        .tooltip:hover:before {
+            display:block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="test">
+        <p>Lorem ipsum <a href="#" class="tooltip " data-msg="thit is dolar">dolor</a>, sit amet consectetur adipisicing elit.
+            Libero molestias perferendis velit quasi animi repudiandae assumenda quam nostrum eligendi
+            sapiente, repellendus sequi corrupti harum delectus similique in! Blanditiis
+            expedita asperiores eius ducimus autem quos rem. Culpa amet, id nostrum voluptas 
+            distinctio voluptatum ad nihil accusamus fugit odit illum aliquid repellendus porro,
+            deserunt <a href="#" class="tooltip " data-msg="thit is minus">minus</a>. Soluta, ad. Provident aspernatur fugit, 
+            eveniet odit modi incidunt corrupti error voluptatum quod accusamus iusto nesciunt hic!
+            Consectetur optio omnis ipsam, asperiores debitis commodi ex libero alias repellat reiciendis
+            deleniti qui culpa, itaque quasi corporis possimus dolor, 
+            magnam obcaecati voluptas similique magni adipisci! Sed tenetur recusandae enim.</p>
+    </div>
+    
+</body>
+</html>
