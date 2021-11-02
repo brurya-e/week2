@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.5</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .spiners{
+
+            display: flex; 
+            justify-content:space-around;
+            align-items:center;
+            margin-top: 50px;                
+       }
+        .full {
+            
+            border: 3px solid #b1abab; 
+            border-top: 3px solid #82ddd6; 
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spinFull 1s linear infinite;
+}
+
+        @keyframes spinFull {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }   
+
+        .half {
+            border: 3px solid black; 
+            border-top: 3px solid  #91ebee;
+            /* border-top: linear-gradient( #e2f2f3 10%, rgba(255, 255, 255, 0) 42%); */
+
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: half 1s linear infinite ;
+}
+
+        @keyframes half {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }   
+
+        .tails {
+  
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            background: #91ebee;
+
+            background: linear-gradient(to right, #91ebee 10%, rgba(255, 255, 255, 0) 40%);
+
+            position: relative;
+ 
+            animation: tails 1.4s infinite linear;
+        }
+
+        .tails:after {
+            background:black;
+            width: 97%;
+            height: 97%;
+            border-radius: 50%;
+            content: '';
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+} 
+
+@keyframes tails {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.dot3-flash {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  
+  animation: dot3-flash 1s infinite linear alternate;
+  animation-delay: .5s;
+}
+
+.dot3-flash::before, .dot3-flash::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot3-flash::before {
+  left: -30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  animation: dot3-flash 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot3-flash::after {
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  animation: dot3-flash 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot3-flash {
+  0% {
+    background-color: #91ebee;
+  }
+  50%,
+  100% {
+    background-color: #b1abab;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="spiners">
+    <div class="full"></div>
+    <div class="half"></div>
+    <div class="tails"></div>
+    <div class="dot3-flash"></div>
+</div>
+
+</body>
+</html>
