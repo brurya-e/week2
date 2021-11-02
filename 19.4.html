@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.4.html</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            display: flex;
+            justify-content:center;  
+            align-items: center;
+            padding: 10px 10px;   
+
+            margin-top: 30px;
+            width: 100vw;
+            height: 10vh;
+            background-color: yellow;
+            font-size: 20px;
+        }
+        .b{
+            position: relative;
+            padding: 10px 10px;            
+            align-items: center;
+            overflow: hidden;
+        
+        }
+        .home:before , .about:before, .services::before, .contact::before{
+            content:'';
+            position: absolute;
+            background-color: black;
+            width: 90%;
+            height: 3px;
+            bottom: 0%;
+
+            transform: translatex(105%);
+            transition: all 1s ;
+
+        }
+        .home:after, .about:after, .services:after, .contact::after{
+            content:'';
+            position: absolute;
+            background-color: black;
+            width: 90%;
+            height: 3px;
+            top: 0%;
+            right: 0;
+
+            transform: translatex(-112%);
+            transition: all 1s ;
+
+        }
+        .home:hover::before,.home:hover::after, .about:hover::before, .about:hover::after, .services:hover::before, .services:hover::after,.contact:hover::before,.contact:hover::after{
+            transform: translatex(0%);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="b home">home</div>
+        <div class="b about">about</div>
+        <div class="b services">services</div>
+        <div class="b contact">contact</div>
+    </div>
+    
+</body>
+</html>
