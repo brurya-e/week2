@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24.4</title>
+
+<style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+        
+    .gallery{
+        display: grid;
+        /* grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(7, 5vw); */
+
+        grid-template-areas:'pic1 pic1 pic2 pic2 pic2 pic3 pic4 pic4'
+                            'pic1 pic1 pic2 pic2 pic2 pic3 pic4 pic4'
+                            'pic5 pic5 pic2 pic2 pic2 pic8 pic8 pic9'
+                            'pic5 pic5 pic6 pic6 pic7 pic8 pic8 pic9'
+                            'pic5 pic5 pic6 pic6 pic13 pic13 pic13 pic9'
+                            'pic10 pic11 pic11 pic12 pic13 pic13 pic13 pic14'
+                            'pic10 pic11 pic11 pic12 pic13 pic13 pic13 pic14';
+
+        grid-gap: 1px;
+    }
+    .gallery_img {
+   
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    .pic1{
+        grid-area: pic1;
+    } 
+    .pic2{
+    grid-area: pic2;
+    } 
+    .pic3{
+    grid-area: pic3;
+    }
+     .pic4{
+    grid-area: pic4;
+    } 
+    .pic5{
+    grid-area: pic5;
+    } 
+    .pic6{
+    grid-area: pic6;
+    }
+     .pic7{
+    grid-area: pic7;
+    } 
+    .pic8{
+    grid-area: pic8;
+    }
+     .pic9{
+    grid-area: pic9;
+    }
+     .pic10{
+    grid-area: pic10;
+    } 
+    .pic11{
+    grid-area: pic11;
+    }
+     .pic12{
+    grid-area: pic12;
+    } 
+    .pic13{
+    grid-area: pic13;
+    }
+     .pic14{
+    grid-area: pic14;
+    } 
+
+</style>
+</head>
+<body>
+   
+    <div class="gallery">
+        <div class="item pic1">
+            <img src="/images/gal-1.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic2">
+            <img src="/images/gal-2.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic3">
+            <img src="/images/gal-3.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic4">
+            <img src="/images/gal-4.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic5">
+            <img src="/images/gal-5.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic6">
+            <img src="/images/gal-6.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic7">
+            <img src="/images/gal-7.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic8">
+            <img src="/images/gal-8.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic9">
+            <img src="/images/gal-9.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic10">
+            <img src="/images/gal-10.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic11">
+            <img src="/images/gal-11.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic12">
+            <img src="/images/gal-12.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic13">
+            <img src="/images/gal-13.jpeg" class="gallery_img" alt="">
+        </div>
+        <div class="item pic14">
+            <img src="/images/gal-14.jpeg" class="gallery_img" alt="">
+        </div> 
+</div>
+    
+</body>
+</html>
